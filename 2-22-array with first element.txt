@@ -1,0 +1,11 @@
+def create_array_with_squares(lower_range, upper_range):
+    result_array = [(num, num**2) for num in range(lower_range, upper_range + 1)]
+    return result_array
+
+# Taking input from the user
+lower_range = int(input("Enter the lower range: "))
+upper_range = int(input("Enter the upper range: "))
+
+# Creating and printing the array
+result = create_array_with_squares(lower_range, upper_range)
+print(result)

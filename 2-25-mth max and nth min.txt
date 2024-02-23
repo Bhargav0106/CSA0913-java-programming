@@ -1,0 +1,37 @@
+import java.util.Arrays;
+
+public class MaxMinSumDifference {
+
+    public static void main(String[] args) {
+        // Sample array
+        int[] array = {14, 16, 87, 36, 25, 89, 34};
+
+        // Sample values for M and N
+        int M = 1;
+        int N = 3;
+
+        // Finding Mth maximum and Nth minimum
+        int mthMax = findMthMaximum(array, M);
+        int nthMin = findNthMinimum(array, N);
+
+        // Calculating sum and difference
+        int sum = mthMax + nthMin;
+        int difference = Math.abs(mthMax - nthMin);
+
+        // Printing the results
+        System.out.println(M + "st Maximum Number = " + mthMax);
+        System.out.println(N + "rd Minimum Number = " + nthMin);
+        System.out.println("Sum = " + sum);
+        System.out.println("Difference = " + difference);
+    }
+
+    public static int findMthMaximum(int[] array, int M) {
+        Arrays.sort(array);
+        return array[array.length - M];
+    }
+
+    public static int findNthMinimum(int[] array, int N) {
+        Arrays.sort(array);
+        return array[N - 1];
+    }
+}

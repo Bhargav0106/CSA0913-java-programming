@@ -1,0 +1,56 @@
+import java.util.Arrays;
+
+public class CommonElementsFinder {
+
+    public static void main(String[] args) {
+        
+        int[] array1 = {2, 5, 8, 10, 12};
+        int[] array2 = {5, 8, 15, 12, 20};
+        int[] commonElements = findCommonElements(array1, array2);
+        System.out.println("Common elements: " + Arrays.toString(commonElements));
+    }
+
+    public static int[] findCommonElements(int[] array1, int[] array2) {
+        // Sorting arrays for easier comparison
+        Arrays.sort(array1);
+        Arrays.sort(array2);
+
+        int i = 0, j = 0;
+        int commonCount = 0;
+
+        // Finding common elements
+        while (i < array1.length && j < array2.length) {
+            if (array1[i] == array2[j]) {
+                commonCount++;
+                i++;
+                j++;
+            } else if (array1[i] < array2[j]) {
+                i++;
+            } else {
+                j++;
+            }
+        }
+
+        // Creating an array to store common elements
+        int[] commonElements = new int[commonCount];
+        i = 0;
+        j = 0;
+        int index = 0;
+
+        // Copying common elements to the array
+        while (i < array1.length && j < array2.length) {
+            if (array1[i] == array2[j]) {
+                commonElements[index] = array1[i];
+                index++;
+                i++;
+                j++;
+            } else if (array1[i] < array2[j]) {
+                i++;
+            } else {
+                j++;
+            }
+        }
+
+        return commonElements;
+    }
+}
