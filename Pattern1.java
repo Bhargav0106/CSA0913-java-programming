@@ -1,0 +1,17 @@
+import java.util.*;
+class Pattern1
+{
+  public static void main(String arg[])
+  {
+    Scanner sc=new Scanner(System.in);
+    int rows=5;
+    for(int i=0;i<=5;i++)
+    {
+      for(int j=0;j<=i;j++)
+      {
+        System.out.println(i);
+      }
+    }
+    System.out.println( );
+  }
+} 
