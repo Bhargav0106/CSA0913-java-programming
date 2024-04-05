@@ -1,0 +1,13 @@
+import java.util.*;
+class Circle
+{
+	public static void main(String arg[])
+	{
+		Scanner sc=new Scanner(System.in);
+		Double pi,r,x;
+		pi=sc.nextDouble();
+		r=sc.nextDouble();
+		x=(pi*r*r);
+		System.out.println("output="+x);
+    	}
+}
