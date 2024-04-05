@@ -1,0 +1,27 @@
+import java.util.*;
+class R192110018
+{
+public static void main(String arg[])
+{
+Scanner sc=new Scanner(System.in);
+String str="saveetha school of engineering";
+String vowels="";
+String consonant="";
+int count=0;
+for(int i=0;i<str.length();i++)
+{
+char ch=str.charAt(i);
+if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+vowels+=ch;
+}
+else if(ch==' '){
+count+=1;
+}
+else{
+consonant+=ch;
+}
+}
+System.out.println(vowels);
+System.out.println(consonant);
+}
+}
